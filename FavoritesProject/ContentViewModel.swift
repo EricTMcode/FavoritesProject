@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-extension ContentView {
     final class ViewModel: ObservableObject {
         @Published var items = [Item]()
         @Published var showingFavs = false
@@ -19,7 +18,6 @@ extension ContentView {
             }
             return items
         }
-        
         
         private var db = Database()
         
@@ -47,4 +45,3 @@ extension ContentView {
             db.save(items: savedItems)
         }
     }
-}
